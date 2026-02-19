@@ -1,13 +1,17 @@
 .active{
-    background-color: rgb(43, 153, 226);
+   color: aquamarine;
+   
 }
-
+.active::before{
+  content: '';
+  width: 100%;
+}
 nav{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(187, 32, 218);
+    background-color:transparent;
     position: sticky;
     top: 0;
     padding: 0px 3%;
@@ -16,7 +20,7 @@ nav{
 
 nav .logo{
     font-size: 35px;
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: none;
     color: white;
     margin: 1rem;
@@ -28,6 +32,7 @@ nav ul{
 }
 nav ul li{
     list-style: none;
+    
 }
 nav ul li a{
     display: block;
@@ -39,14 +44,16 @@ nav ul li a{
     font-size: 16px;
     font-weight: 500;
     transition: .3s;
+    position: relative;
 }
 
 .icons{
     display: none;
 }
 
-nav ul li a:not(.active):hover{
-    background-color: brown;
+
+nav ul li a:hover{
+  color: blueviolet;
 }
 
 .MenuBtn{
@@ -72,18 +79,24 @@ nav ul li a:not(.active):hover{
     position: absolute;
     flex-direction: column;
     left: 0;
-    top: 65px;
+    top: 60px;
     width: 100%;
-    background-color: blueviolet;
+    background-color: #2c2c2c;
+    
     
    
   }
-  nav ul li{
-    padding: 10px;
-  }
+  
+  
   nav ul li a{
+    padding: 10px 0;
     text-align: center;
+    
   }
+  nav ul li a:hover{
+    color: brown;
+  }
+ 
   .block{
     display: block;
   }

@@ -11,6 +11,8 @@ function Navber() {
   setIsOpen(!isOpen)
 
   const CloseMenu = () => setIsOpen(false);
+
+  
  } 
   return (
     <nav>

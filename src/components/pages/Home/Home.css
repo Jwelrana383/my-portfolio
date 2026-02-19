@@ -22,7 +22,7 @@
 .homeInfo .btnBox{
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .homeInfo .btnBox .btn{
@@ -50,14 +50,14 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-left: 20px;
+    margin-left: 25px;
     
 }
 
 .homeInfo .btnBox .social-icons .in{
     width: 40px;
     height: 40px;
-    color: #27D3F5;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,70 +70,91 @@
 }
 .btnBox .social-icons .in:hover{
     background: #27D3F5;
-    border: none;
+    
     box-shadow: 0 0 10px #27D3F5;
+    color: #1f242d;
 }
 
 .homeInfo .btnBox .social-icons .social-icon{
     text-align: center;
     font-size: 20px;
 }
-.homeImg {
-    margin-left: 20px;
-}
+
 .homeImg .imgbox{
     position: relative;
-    height: 32vw;
     width: 32vw;
-    background: transparent;
+    height: 32vw ;
+    background:transparent;
+    border-radius: 50%;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     overflow: hidden;
-    padding: 5px;
 }
-
 .homeImg .imgbox::before,
-.homeImg .btnBox::after{
+.homeImg .imgbox::after{
     content: '';
     width: 500px;
     height: 500px;
     background-image: conic-gradient(transparent,transparent,transparent,#27D3F5);
     position: absolute;
-    
     transform: rotate(0deg);
-    animation: 10s spin linear infinite;
+    animation: spain 10s linear infinite;
 }
-.homeImg .btnBox::after{
+.homeImg .imgbox::after{
     animation-delay: -5s;
 }
-
-@keyframes spin{
+@keyframes spain{
     100%{
         transform: rotate(360deg);
     }
 }
-
-
 .homeImg .imgbox .imgItems{
-   position: relative; 
-   width: 100%;
-   height: 100%;
-   background: #1f242d;
-   border-radius: 50%;
-   overflow: hidden;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   z-index: 1;
-   
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    border: .5px solid #1f242d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .homeImg .imgbox .imgItems img{
     position: absolute;
-    width: 95%;
+    top: 35px;
     display: block;
-    top: 25px;
+    width: 99%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+    
 }
 
+@media (max-width: 640px)
+{
+    .home{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column-reverse;
+    }
+    .homeInfo h2{
+        font-size: 40px;
+        margin-top: 40px;
+
+    }
+    .homeInfo h3{
+        font-size: 30px;
+    }
+    .homeImg .imgbox{
+        width: 300px;
+        height: 300px;
+        z-index: -1;
+    }
+
+}
+
+ 

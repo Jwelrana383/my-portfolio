@@ -2,13 +2,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    height: 100%;
     padding: 30px 4% 0;
     
+    
 }
-
+.homeInfo{
+ animation: hading 1s linear forwards;
+ animation-delay: .5s;
+ opacity: 0;
+visibility: hidden;
+transform: translate(10%);
+transition: ease;
+   
+}
+@keyframes hading{
+    100%{
+     transform: translate(0);
+     opacity: 1;
+     visibility: visible;
+    }
+}
 .homeInfo h2{
    font-size: 50px;
+   
+   
+
+
 }
 
 .homeInfo h3{
@@ -23,17 +43,19 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
+   
 }
+
 
 .homeInfo .btnBox .btn{
     display: inline-block;
     padding: 10px 30px;
-    background-color: #27D3F5;
-    box-shadow: 0 0 10px #27D3F5;
+    background-color: #B027F5;
+    box-shadow: 0 0 10px #B027F5;
     color: black;
     font-size: 16px;
     font-weight: 600;
-    border: 2px solid #27D3F5;
+    border: 2px solid #B027F5;
     border-radius: 20px;
     transition: .5s;
     cursor: pointer;
@@ -61,7 +83,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #27D3F5;
+    border: 2px solid #B027F5;
     border-radius: 50%;
     cursor: pointer;
     transition: .5s;
@@ -69,9 +91,9 @@
    
 }
 .btnBox .social-icons .in:hover{
-    background: #27D3F5;
+    background: #B027F5;
     
-    box-shadow: 0 0 10px #27D3F5;
+    box-shadow: 0 0 10px #B027F5;
     color: #1f242d;
 }
 
@@ -82,6 +104,8 @@
 
 .homeImg .imgbox{
     position: relative;
+    opacity: 0;
+    visibility: hidden;
     width: 32vw;
     height: 32vw ;
     background:transparent;
@@ -91,17 +115,33 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    transform: translateX(-20%);
+    animation: imgAni 1s linear forwards;
+    animation-delay: .5s;
+    z-index: 6;
+    transition: .5s;
+
 }
+@keyframes imgAni{
+  100%{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+}
+
+
 .homeImg .imgbox::before,
 .homeImg .imgbox::after{
     content: '';
     width: 500px;
     height: 500px;
-    background-image: conic-gradient(transparent,transparent,transparent,#27D3F5);
+    background-image: conic-gradient(transparent,transparent,transparent,#B027F5);
     position: absolute;
     transform: rotate(0deg);
     animation: spain 10s linear infinite;
 }
+
 .homeImg .imgbox::after{
     animation-delay: -5s;
 }
@@ -133,7 +173,7 @@
     
 }
 
-@media (max-width: 640px)
+@media (max-width: 639px)
 {
     .home{
        display: flex;

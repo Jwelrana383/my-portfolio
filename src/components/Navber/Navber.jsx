@@ -11,12 +11,10 @@ function Navber() {
   setIsOpen(!isOpen)
 
   const CloseMenu = () => setIsOpen(false);
-
-  
- } 
+ }
   return (
     <nav>
-      <Link to={'/'} className="logo"> Portfolio. </Link>
+      <Link to={'/'} className="logo"> Port<span>folio.</span> </Link>
         <div className="icons">
           <button className="MenuBtn" onClick={toggleMenu}>
             {

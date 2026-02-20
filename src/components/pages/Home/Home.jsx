@@ -7,7 +7,7 @@ function Home() {
       <div className="homeInfo">
         <h2> JwelRana </h2>
         <h3> I'm a Web Developer </h3>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolores recusandae sed debitis. Neque incidunt a optio ea nisi molestiae! </p>
+        <p> I am a results-driven Web & App Developer and Creative Designer with a strong foundation in frontend development and user interface design. I have hands-on experience in developing responsive web applications and designing intuitive user experiences. </p>
         <div className="btnBox">
           <input type="button" value="Download CV" className="btn"/>
           <div className="social-icons">

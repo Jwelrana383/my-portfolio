@@ -1,5 +1,5 @@
 .active{
- background: #27D3F5;
+ background: #B027F5;
  color: black;
 
    
@@ -13,18 +13,32 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:transparent;
+    transform: skew(10%);
+    opacity: 0;
+    visibility: hidden;
+    background-image: linear-gradient(#1f242d 70%,transparent);
     position: sticky;
     top: 0;
     padding: 0px 3%;
+   animation: navAni 1s linear forwards;
+   animation-delay: 0.3s;
    
+}
+
+@keyframes navAni{
+  100%{
+    transform: skew(0%);
+    opacity: 1;
+    visibility: visible;
+    
+  }
 }
 
 nav .logo{
     font-size: 35px;
     font-weight: bolder;
     text-decoration: none;
-    color: white;
+    color: #B027F5;
     margin: 1rem;
 }
 
@@ -55,7 +69,7 @@ nav ul li a{
 
 
 nav ul li a:hover{
-  color: #27D3F5;
+  color: #4d27f5;
 
 }
 
@@ -98,7 +112,7 @@ nav ul li a:hover{
     
   }
   nav ul li a:hover{
-    color: brown;
+    color:#B027F5;
   }
  
   .block{

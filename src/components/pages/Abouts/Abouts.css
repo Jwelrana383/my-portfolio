@@ -1,0 +1,258 @@
+.abouts{
+   width: 100%;
+   height: 100%;
+   padding: 30px 3% 0;
+   display: flex;
+   align-items: center;
+    justify-content: space-between;
+   
+}
+
+
+
+.abouts h2{
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+   font-size: 40px;
+   font-weight: 600;
+   margin: 20px 0;
+   transform: translateX(-10%);
+   animation: h2-ani 1s linear forwards ;
+   animation-delay: .5s;
+   cursor: pointer;
+ 
+}
+@keyframes h2-ani{
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.abouts h2::before{
+    content: '';
+    width: 160px;
+    height: 3px;
+    background: #B027F5;
+    position: absolute;
+    top: 60px;
+    transition: 3s;
+}
+
+.abouts h2:hover::before{
+   width:80px;
+   
+}
+.abouts h3{
+    opacity: 1;
+    visibility: hidden;
+    font-size: 34px;
+    font-weight: 500;
+    transform:translateX(-20%);
+    animation: h3-ani 1s linear forwards;
+    animation-delay: .5s;
+}
+
+@keyframes h3-ani{
+    100%{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(100%)
+    }
+}
+
+.abouts h3 span{
+    color: #B027F5;
+}
+
+.abouts p{
+    opacity: 0;
+    visibility: hidden;
+    font-size: 16px;
+     
+    transform: translateX(5%);
+    animation: p-ani 2s linear forwards;
+    animation-delay: .5s;
+    transition: .3s ease;
+
+    
+}
+
+@keyframes p-ani{
+    100%{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0%)
+    }
+}
+
+.abouts button {
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    background: #B027F5;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #B027F5;
+    transition: .5s;
+    margin: 10px 0;
+   
+    
+}
+
+
+
+
+
+.abouts button:hover{
+    background: transparent;
+    border: 2px solid #B027F5;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.about-img{
+    transform: translate(-10%);
+    animation: about 1s linear forwards;
+    animation-delay: .5s;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 10px;
+}
+
+@keyframes about{
+    100%{
+        transform: translate(0%);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+.about-img .abouts-img-box{
+    position: relative;
+    width: 28vw;
+    height: 30vw;
+    
+    border-radius: 15px;
+    padding: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-img .abouts-img-box::before,
+.about-img .abouts-img-box::after{
+    content: '';
+    width: 200px;
+    height: 700px;
+    
+    background-image: conic-gradient(transparent,transparent,transparent,transparent, #B027F5);
+    position: absolute;
+    transform: rotate(0deg);
+    animation: about-ani 12s linear infinite;
+}
+
+.about-img .abouts-img-box::after{
+    animation-delay: -3s;
+    
+}
+
+.aboutbox{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutbox::before,
+.aboutbox::after{
+    content: '';
+      width: 200px;
+    height: 700px;
+    
+    background-image: conic-gradient(transparent,transparent,transparent,transparent, #B027F5);
+    position: absolute;
+    transform: rotate(0deg);
+    animation: about-ani 12s linear infinite;
+}
+
+.aboutbox::before{
+    animation-delay: -6s;
+}
+
+.aboutbox::after{
+    animation-delay: -9s;
+}
+
+
+@keyframes about-ani{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.about-img .abouts-img-box .abouts-img-items{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #1f242d;
+    box-shadow:0 0 5px #2e3f46;;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.about-img .abouts-img-box .abouts-img-items img{
+    display: block;
+    width: 99%;
+    position: absolute;
+    top: 30px;
+    
+    
+
+}
+
+@media (max-width :639px){
+    .abouts{
+        display: inline-flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+         
+    }
+
+    .abouts h2{
+        font-size: 25px;
+    }
+    .abouts h2::before{
+        top: 40px;
+        width: 100px;
+        
+    }
+    .abouts h3{
+        font-size: 20px;
+        margin-top: -10px;
+    }
+    .abouts p{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    .abouts-items{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .about-img .aboutbox{
+        width: 400px;
+        height: 400px;
+        z-index: -4;
+    }
+}
